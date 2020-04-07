@@ -26,6 +26,7 @@ function Line_Inter(parA,parB)
 end
 
 function TS_BoxCheck(x,y,par,kind)
+    --检测点是否在矩形或圆形内的函数
     local rectangle = "rectangle"
     local circle = "circle"
     if kind ~= rectangle and kind ~= circle then return "Please Enter rectangle Or Circle" end
@@ -78,7 +79,7 @@ function Line_Circle_Check(parL,parC)--获取线段与圆交点的函数，返�
     
 end
 
-function CircleCircle(x1,y1,x2,y2,r1,r2)
+function CircleCircle(x1,y1,x2,y2,r1,r2)--没写完 没写完 没写完 没学到 没学到 没学到
     if math.sqrt((x1-x2)*(x1-x2)+(y1-y2)*(y1-y2))>(r1+r2) or math.sqrt((x1-x2)*(x1-x2)+(y1-y2)*(y1-y2))<(r1-r2) then
         return "No Intersection"
     end
@@ -86,7 +87,7 @@ function CircleCircle(x1,y1,x2,y2,r1,r2)
 end
 
 function CircleCheck(x1,y1,x,y,r)
-    if (x-x1)*(x-x1)+(y-y1)*(y-y1) <= r*r then--算出已知点与圆心的坐标的距离，然后与r比较
+    if (x-x1)*(x-x1)+(y-y1)*(y-y1) <= r*r then --算出已知点与圆心的坐标的距离，然后与r比较
         return true
     else
         return false
